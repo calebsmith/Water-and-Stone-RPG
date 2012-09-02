@@ -59,6 +59,7 @@ INPUT #1, lev
 
 INPUT #1, aqua
 CLOSE
+oldexpr = expr
 IF armoron = 1 THEN ac = ac - 4
 
 'load spells from spellbitvector
@@ -916,6 +917,7 @@ GET (130, 100)-(180, 100), montemphp%
 gottenhp = 1
 IF xdismonhealth > -1 THEN LINE (130, 100)-(130 + xdismonhealth, 100), 4
 IF monhp < 1 THEN   'monster dead
+        expr = expr + mlev * 175
         LOCATE 17, 3
         PRINT "                                   "
         LOCATE 18, 3
@@ -924,6 +926,9 @@ IF monhp < 1 THEN   'monster dead
         LOCATE 17, 3
         COLOR 4
         PRINT ""; monname$; " is dead."
+        LOCATE 18, 3
+        PRINT "You gained:"; expr - oldexpr; " XP"
+
                 FOR sleepin = 1 TO sleeptime: NEXT
         IF monster = 1 THEN dalive = 0
         IF monster = 2 THEN salive = 0
@@ -966,7 +971,6 @@ IF monhp < 1 THEN   'monster dead
 
                 END IF
         END IF
-        expr = expr + mlev * 175
 
                 FOR sleepin = 1 TO sleeptime: NEXT
         EXIT DO
