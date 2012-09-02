@@ -927,7 +927,7 @@ IF monhp < 1 THEN   'monster dead
         COLOR 4
         PRINT ""; monname$; " is dead."
         LOCATE 18, 3
-        PRINT "You gained:"; expr - oldexpr; " XP"
+        PRINT "You gained"; expr - oldexpr; " XP"
 
                 FOR sleepin = 1 TO sleeptime: NEXT
         IF monster = 1 THEN dalive = 0

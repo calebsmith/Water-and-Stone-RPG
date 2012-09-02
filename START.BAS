@@ -176,6 +176,7 @@ initialload = 0
 
 END IF
 
+IF selection = 3 THEN SYSTEM
 OPEN "tempsave.dat" FOR OUTPUT AS #1
 PRINT #1, battletime
 PRINT #1, start$
