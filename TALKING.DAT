@@ -1,0 +1,541 @@
+101
+&
+1
+These are sad times
+lad. I wish I knew
+what I could do to
+help you. Go talk to
+the village elder. He
+lives at the west end
+of the village. I'm
+sure he'll have some
+information for you.
+Good luck boy!
+^
+102
+&
+2
+Please Help me! I'm a
+citizen of Riendale
+and I cannot enter the
+town for fear of the
+rabbid animal that is
+lurking around in
+there. Please take my
+sword and slay the
+beast so that things
+can return to normal.
+^
+103
+&
+2
+Thank you so much kind
+stranger. Your good
+deed shall be
+remembered. here
+are all of the gold
+pieces I have on me.
+^
+104
+&
+1
+A rabbid beast you say?
+Do be careful lad. Be
+sure you have a healing
+potion from the magic
+shop and a decent
+weapon.
+^
+105
+&
+1
+Please! Help the people
+of Riendale by killing
+the beast that plagues
+their town.
+^
+106
+&
+2
+Please help us!
+^
+107
+&
+1
+You have done a great
+service to the people
+of Riendale. If you
+continue to do such
+things then I'm sure
+your efforts will be
+remembered.
+^
+108
+&
+1
+If you've nothing else
+to do you could always
+go hunting and
+exploring in the woods
+north of here. Though I
+do warn you to be
+careful. Take a
+skinning knife to help
+you. They're sold in
+the other town.
+^
+109
+&
+1
+Ropes really can get
+you out of a bad
+situation sometimes.
+^
+110
+&
+1
+The town elder always
+seems to have something
+he'd like done around
+here.
+^
+111
+&
+2
+Thank you so much kind
+stranger for ridding
+the town of that
+rabbid animal. Take
+my sword and gold as
+tribute for your good
+deed.
+^
+120
+&
+0
+You will be avenged
+father! I swear it!
+^
+500
+&
+3
+What do you seek child?
+^
+2
+Who killed my father?
+501
+Who are you?
+502
+*
+501
+&
+3
+That is an answer
+which no one seems to
+know. You alone must
+seek it if you wish to
+find peace. However
+some fishermen
+reported a suspicious
+group of men traveling
+from across the bridge
+outside of town.
+^
+2
+A group of suspicious men?
+503
+I'll go talk to them then.
+504
+*
+502
+&
+3
+I am Traogon. I am rather
+old and must stay here and
+rest. I wish I could be
+of more assistance but you
+can always come to me for
+advice.
+^
+2
+Okay thanks. Bye
+0
+Who killed my father?
+501
+*
+503
+&
+3
+Yes. They came from the
+east on horseback and
+rode off before anyone
+could stop them. Go to
+the piers and talk to
+the fishermen for
+further information.
+I'm afraid that's all I
+know.
+^
+1
+Thanks. Bye now
+0
+*
+504
+&
+3
+Be patient child.
+Important answers aren't
+always so easy to find.
+These fishermen can be
+found outside of town
+along the beach to the
+east of here. I bid the
+farewell.
+^
+1
+Farewell then.
+0
+*
+550
+&
+4
+Aye laddy. What be yer
+business at the docks
+today? Wanna sign up
+fer a fishin boat lad?
+^
+2
+I just want information.
+551
+Sure. I'll go fishing.
+552
+*
+551
+&
+4
+What's yer inquiry then
+laddy? What would you like
+this ol' fishermen to tell
+ye about?
+^
+2
+The group of men last night?
+553
+What's across the bridge?
+555
+*
+552
+&
+4
+Me thinks ya look a
+bit to shrimpy ta handle
+a fine naval vessel such
+as the ones I rent. Come
+back when yer a might bit
+older.
+^
+2
+Nevermind then. Bye.
+0
+I just want information.
+551
+*
+553
+&
+4
+Yer that orphaned boy
+aint ya'? Well I reckon
+I can give you some
+discount prices on
+todays catch if yer
+hungry.
+^
+2
+Right. About the men?
+554
+Nevermind. Bye
+0
+*
+554
+&
+4
+Oh right. They came by
+horseback see AND killed
+a man in each village.
+When they returned they
+destroyed part of the
+bridge see. Ask the
+fishermen that lives in
+Riendale. he's off duty
+fer a bit and be at home.
+^
+2
+Ok. Thanks.
+0
+What's across the bridge?
+555
+*
+555
+&
+4
+Well. If'n ya ever get
+it fixed dare's a couple
+a' villages that way an
+den dare be the desert a'
+Kawalaki. This desert is
+a dangerous place lad. It
+be best ye get up some good
+strength before goin' dare.
+^
+2
+Thanks. I'll go now.
+0
+Tell me about the men.
+553
+*
+600
+&
+5
+Aye. who's dare? Is it
+you Cap'ain? I'm off duty
+today Cap'ain. Gettin' me
+rest before the next
+journey. Come a lil' closer
+matey. I c'nt see ya' from
+'er. Who's dare?
+^
+2
+Sorry to bother you. Bye.
+0
+I just have a few questions.
+601
+*
+601
+&
+5
+What do I know 'bout 'cept
+fishin' spots?
+I dun think I
+reco'nize yer face
+exactly. Whatcha need
+matey? Wa's yer questions
+about?
+^
+2
+The murders last night.
+603
+Good fishing spots.
+602
+*
+602
+&
+5
+Well. I better guard those
+with me life. That be me
+livelyhood see. I better
+get some rest if ye' don't
+mind.
+^
+2
+Tell me about the murders
+603
+Okay. Goodbye then.
+0
+*
+603
+&
+5
+Twas five of 'em came across da'
+bridge see. Each had dark robes
+and balaclavas. They bore
+crimson insignias of two lizards
+on their shields. I saw 'em on
+dare way over an' didn't know
+they was up to no good. They
+rode away at an uncanny  speed
+matey. Somethin' terribly
+unnatural about it.
+^
+2
+Uncanny speed you say?
+604
+Thanks. Good'ay.
+0
+*
+604
+&
+5
+Aye. You could barely see the
+legs of the horses movin' as
+the dark blur of their figures
+shot back across the bridge.
+Like magic I have never heard
+of. An' mind you... I've heard
+many a tale of sirens and
+merefolk. People is afraid ta'
+fix the bridge now... thinkin'
+it be cursed.
+^
+2
+Cursed? What?
+605
+I wouldn't fix it either.
+606
+*
+605
+&
+5
+People are afraid to go near
+the bridge after all that and
+it'd be hard to convince
+anyone to fix it seein' as
+its destruction makes people
+feel safe. Me thinks nothins'
+ta' stop 'em from sailin' over
+if they wanted ta'.
+^
+1
+Thanks for your time. Bye.
+0
+*
+606
+&
+5
+Aye me neither. They might
+come back if'n we fix it but
+seein' what I saw... I dunno
+what could stop 'em really.
+^
+1
+Thanks. Bye.
+0
+*
+650
+&
+6
+Greetings boy. Do you
+remember me? I am Sif. I
+am the widow of Balam. You
+must be the son of Kahn. If
+only they had taken me
+instead. I don't know why
+they spared me but they took
+away my life when they
+killed my dear husband.
+^
+2
+Why were they after Balam?
+651
+What are you going to do?
+652
+*
+651
+&
+6
+They seemed to think he
+either had some magical
+stone or that he was in
+cohorts with someone who did.
+Balam never told me about it
+though so I was confused the
+whole time. Maybe they asked
+your father about the same
+thing. I would give any stone
+to have my Balam back.
+^
+2
+Thanks. Bye
+0
+What do you plan on doing?
+652
+*
+652
+&
+6
+I don't know what to do
+now without Balam. What
+are you doing child? Are
+you seeking out revenge?
+^
+2
+No. I Just need some answers.
+653
+Yes. In the name of Kahn.
+654
+*
+653
+&
+6
+Good because Kahn wouldn't
+want any violent heroics
+from his son. Can I do
+anything to help?
+^
+2
+Tell me everything you know.
+655
+No Thanks. Bye now.
+0
+*
+654
+&
+6
+Don't be ridiculous.
+Kahn would never want you
+to seek a bloody revenge.
+If you truly cherish his
+memory you would honor him
+best by granting mercy.
+^
+1
+Ok. Bye
+0
+*
+655
+&
+6
+I Don't really know much but
+I believe the men were after
+some sort of stone. I heard
+they sacked a whole village
+to the north. Evil Evil men
+they must be.
+^
+1
+Indeed. Bye
+0
+*
+700
+&
+2
+Thank you for helping me.
+I Don't know what demons
+possesed my pet but it
+turned on me and started
+attacking everyone around
+the town. Very strange must
+have been used to enchant
+it.
+^
+2
+When did it go mad?
+701
+Your welcome. Bye
+0
+*
+701
+&
+2
+Sometime in the middle
+of the night last night
+it started foaming at
+the mouth AND attacking
+me. I ran out of town to
+get away. I hope she
+didn't bite anybody.
+^
+1
+Me too. Bye
+0
+*
+====
