@@ -64,7 +64,10 @@ CLOSE
 END IF
 
 
-c3 = 55
+c3 = 32
+maxcc = 120
+cc = maxcc + 1
+
 nummons = 5   'number of gang thugs  in forest 2, including boss
 numwildmax = 6
 numwild = INT(RND * numwildmax) + 2'number of wild animals in forest3 and further
@@ -1111,6 +1114,52 @@ d = (xpl) + (ypl * 25)
         NEXT y
 
 d = (xpl) + (ypl * 25)
+
+
+
+    ' animation w/ pallete
+
+    cc = cc + 1
+    c2 = c3
+    IF cc > maxcc THEN
+    cc = 0
+    IF c3 = 79 THEN
+            c3 = 176
+            GOTO 160
+    END IF
+    IF c3 = 176 THEN
+            c3 = 104
+            GOTO 160
+    END IF
+    IF c3 = 104 THEN
+            c3 = 1
+            GOTO 160
+    END IF
+    IF c3 = 1 THEN
+            c3 = 32
+            GOTO 160
+    END IF
+    IF c3 = 32 THEN
+            c3 = 55
+            GOTO 160
+    END IF
+    IF c3 = 55 THEN
+            c3 = 79
+            GOTO 160
+    END IF
+
+    160
+    OUT &H3C7, c3
+    r = INP(&H3C9)
+    g = INP(&H3C9)
+    B = INP(&H3C9)
+    OUT &H3C8, c2
+    OUT &H3C9, r
+    OUT &H3C9, g
+    OUT &H3C9, B
+
+    END IF
+
 
 '-----------------------------------------
 'greetings               (people talk to you)

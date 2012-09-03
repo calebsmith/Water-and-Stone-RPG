@@ -1,5 +1,7 @@
 DECLARE SUB load (bclear%(), bs, f$, file$)
 DECLARE SUB save (bclear%(), cx, cy, bs, f$, file$)
+DECLARE SUB cfn (file$, filenamechange, path$, filename$, oldf$)
+
 DECLARE SUB MouseDriver (Ax%, bx%, cx%, dx%)
 DECLARE FUNCTION MouseInit% ()
 DECLARE SUB MOUSEPUT (PUTX%, PUTY%)
@@ -32,6 +34,7 @@ bc = 18
 cl = 31
 
 changed = 1
+DIM saveget(3251)
 DIM cursor%(49)
 DIM cbox(1024)
 DIM bclear%(49)
@@ -66,7 +69,6 @@ CLS
 
 c = 32                   'default color
 PAINT (100, 100), 16, 16
-'CALL load(bclear%(), bs, f$)
 
 
 DEF SEG = &HA000
@@ -123,10 +125,14 @@ END IF
   SELECT CASE k
     CASE &H3B   'F1
     CASE &H3D   'F3
-    CALL save(bclear%(), cx, cy, bs, f$, file$)
-     CASE &H3E   'F4
-    CALL load(bclear%(), bs, f$, file$)
-    hl = 1
+        CALL save(bclear%(), cx, cy, bs, f$, file$)
+    CASE &H3E   'F4
+        CALL load(bclear%(), bs, f$, file$)
+        hl = 1
+    CASE &H3F   'F5 - change filename
+        GET (165, 45)-(315, 110), saveget
+        CALL cfn(file$, filenamechange, path$, filename$, oldf$)
+        PUT (165, 45), saveget, PSET
     CASE &H40   'F6
     CASE &H52   '0
     CASE &H4C   '5
@@ -332,3 +338,23 @@ CLS
 CALL load(bclear%(), bs, f$, file$)
 END SUB
 
+
+SUB cfn (file$, filenamechange, path$, filename$, oldf$)
+LINE (165, 45)-(315, 110), 0, BF
+LINE (166, 46)-(314, 109), 28, B
+COLOR 29
+LOCATE 7, 22
+PRINT "Enter new filename"
+LOCATE 8, 22
+PRINT "Do not include:"
+LOCATE 9, 22
+PRINT "  Path"
+LOCATE 10, 22
+PRINT "  File Extension"
+LOCATE 12, 22
+INPUT "", filename$
+oldf$ = file$
+file$ = path$ + filename$ + ".dis"
+filenamechange = 1
+
+END SUB

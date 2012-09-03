@@ -1,6 +1,7 @@
 DECLARE SUB hexload (bclear%(), cursor%(), xp2, yp2, x, y, thr)
 DECLARE SUB load (bclear%(), bs, F$, mousebackchange, lbchange, colchange, mx, my, size)
 DECLARE SUB save (bclear%(), cx, cy, bs, F$, mx, my)
+DECLARE SUB cfn (f$, filenamechange, path$, filename$, oldf$)
 DECLARE SUB MouseDriver (Ax%, bx%, cx%, dx%)
 DECLARE FUNCTION MouseInit% ()
 DECLARE SUB MOUSEPUT (PUTX%, PUTY%)
@@ -15,7 +16,7 @@ beg$ = "Town1"
 beg2$ = ""
 beg$ = beg$ + beg2$
 end$ = ".dat"
-F$ = beg$ + end$
+f$ = beg$ + end$
 
 hl = 2
 bs = 15
@@ -154,12 +155,14 @@ END IF
     CHAIN "/windows/desktop/ladder/paint.bas"
     CASE &H3D   'F3
        GET (165, 45)-(315, 110), saveget
-    CALL save(bclear%(), cx, cy, bs, F$, mx, my)
+    CALL save(bclear%(), cx, cy, bs, f$, mx, my)
        PUT (165, 45), saveget, PSET
      CASE &H3E   'F4
-    CALL load(bclear%(), bs, F$, mousebackchange, lbchange, colchange, mx, my, size)
-    CASE &H3F   'F5
-   ' CALL hexload(bclear%(), cursor%(), xp2, yp2, x, y, thr)
+    CALL load(bclear%(), bs, f$, mousebackchange, lbchange, colchange, mx, my, size)
+    CASE &H3F   'F5 - change filename
+        GET (165, 45)-(315, 110), saveget
+        CALL cfn(f$, filenamechange, path$, filename$, oldf$)
+        PUT (165, 45), saveget, PSET
    CASE &H40   'F6
     CASE &H52   '0
     CASE &H4C   '5
@@ -455,3 +458,23 @@ SLEEP
 CALL load(bclear%(), bs, F$, mousebackchange, lbchange, colchange, mx, my, size)
 END SUB
 
+
+SUB cfn (f$, filenamechange, path$, filename$, oldf$)
+LINE (165, 45)-(315, 110), 0, BF
+LINE (166, 46)-(314, 109), 28, B
+COLOR 29
+LOCATE 7, 22
+PRINT "Enter new filename"
+LOCATE 8, 22
+PRINT "Do not include:"
+LOCATE 9, 22
+PRINT "  Path"
+LOCATE 10, 22
+PRINT "  File Extension"
+LOCATE 12, 22
+INPUT "", filename$
+oldf$ = f$
+f$ = path$ + filename$ + ".dat"
+filenamechange = 1
+
+END SUB

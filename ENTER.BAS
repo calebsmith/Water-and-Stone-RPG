@@ -1665,7 +1665,7 @@ FOR d = 1 TO 11
         peltworth = peltworth + currentpelt
         peltcount(d) = 0
 NEXT
-        peltworth = INT(peltworth * 2)
+        peltworth = INT(peltworth * 4)
         IF peltworth > 0 THEN
                 gp = gp + peltworth
                 COLOR 31

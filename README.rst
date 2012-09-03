@@ -82,9 +82,9 @@ Controls for these tools are the same:
     * Use the left and right arrow keys to select a color. It's slow going, but there are only 256 colors to choose from.
     * F3 - Save as current filename
     * F4 - Load current filename (or reload)
-    * F5 - (PAINT only) - Change current filename
+    * F5 - Change current filename
 
-For BACKMAKE and MAPDRAW, you have to edit the filename of the asset you want to edit at the top of the source code and re-compile.
+N.B. If F5 is used to change to a filename that doesn't yet exist, loading will crash the editor.
 
 The details of the following assets are undocumented and unecessarily labyrinthine:
     * WILD, DOG and SPIDER DAT files are monster stat files that are edited by hand.
