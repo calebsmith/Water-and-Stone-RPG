@@ -427,12 +427,12 @@ DEF SEG = &HA000
 PUT (cx + 1, cy + 1), bclear%, PSET
 c = 1
 CLOSE
-'OPEN "/windows/desktop/ladder/tile41.dat" FOR OUTPUT AS #1
 OPEN F$ FOR OUTPUT AS #1
 PRINT #1, mx
 PRINT #1, my
-FOR y = 9 TO (my * 5) + 9 STEP 2
-FOR x = 7 TO (mx * 5) + 6 STEP 3
+FOR y = 9 TO (my * 10) + 9 STEP 10
+FOR x = 7 TO (mx * 10) + 6 STEP 10
+
 c = POINT(x, y)
 PRINT #1, c
 NEXT
