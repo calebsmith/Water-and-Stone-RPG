@@ -430,8 +430,8 @@ IF INT(hp) <= 0 THEN
         CLS
         SCREEN 13
         DEF SEG = &HA000
-        'BLOAD "C:\rpg\death.dis", 0
-        BLOAD "death2.dis", 0
+
+        BLOAD "death.dis", 0
 
         FOR sleepin = 1 TO sleeptime: NEXT
 
@@ -641,7 +641,7 @@ d = (xpl) + (ypl * 25)
             tilright = t(d + 1)
             tilcurrent = t(d)
             CALL mapright(tilright, tilcurrent, start$, xpl, ypl, didchange, books)
-            
+
         IF didchange = 1 THEN
             maploaded = 0
 
