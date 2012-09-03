@@ -42,20 +42,21 @@ After compiling, use a DOS prompt and run::
 Instructions for Play
 ---------------------
 
-During play:
-* Arrow keys - Move Character
-* Space bar - Main menu
-* F1 - Help
-* Esc - Quit
-* F3 - Save
-* F4 - Load
-* F5 - Score
-* F6 - Magic
-* F7 - Inventory
+During play
 
-In a menu:
-* Use arrow keys to move the cursor
-* Use space bar to make a selection
+    * Arrow keys - Move Character
+    * Space bar - Main menu
+    * F1 - Help
+    * Esc - Quit
+    * F3 - Save
+    * F4 - Load
+    * F5 - Score
+    * F6 - Magic
+    * F7 - Inventory
+
+In a menu
+    * Use arrow keys to move the cursor
+    * Use space bar to make a selection
 
 
 Editing Game Assets
