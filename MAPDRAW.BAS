@@ -11,10 +11,9 @@ c30 = 112
 size = 10
 CLS
 SCREEN 13
-path$ = "C:\myrpg\"
-beg$ = "Island"
+beg$ = "Town1"
 beg2$ = ""
-beg$ = path$ + beg$ + beg2$
+beg$ = beg$ + beg2$
 end$ = ".dat"
 F$ = beg$ + end$
 
@@ -76,7 +75,7 @@ CLS
 'background (The black and white and gray thing all around)
 
 DEF SEG = &HA000
-BLOAD "C:\myrpg\back_5.dis", 0
+BLOAD "back_5.dis", 0
 
 'the text box (hide the background)
 'LINE (165, 5)-(315, 50), 0, BF
@@ -302,7 +301,7 @@ PRINT "exiting..."
 SLEEP 1
 END IF
 
-STOP
+SYSTEM
 
 
 

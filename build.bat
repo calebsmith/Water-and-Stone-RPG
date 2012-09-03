@@ -8,6 +8,9 @@ bc load.bas /e
 bc save.bas /e
 bc magic.bas /e
 bc equip.bas /e
+bc paint.bas /e
+bc mapdraw.bas /e
+bc backmake.bas /e
 link start.obj
 link rpgtile.obj
 link main.obj
@@ -18,3 +21,6 @@ link load.obj
 link save.obj
 link magic.obj
 link equip.obj
+link paint.obj
+link mapdraw.obj
+link backmake.obj

@@ -1,4 +1,3 @@
-DECLARE SUB hexload (bclear%(), cursor%(), xp2, yp2, x, y, thr)
 DECLARE SUB load (bclear%(), bs, f$, file$)
 DECLARE SUB save (bclear%(), cx, cy, bs, f$, file$)
 DECLARE SUB MouseDriver (Ax%, bx%, cx%, dx%)
@@ -10,7 +9,10 @@ DIM tile30%(100)
 DIM C4(100)
 DIM cursorc(49)
 'ON ERROR GOTO 5
+
+'Background file to edit
 file$ = "house_5.dis"
+
 c3 = 32
 CLS
 SCREEN 13
@@ -59,26 +61,7 @@ DIM p(1)
 
 
 
-
-'title
-'DEF SEG = &HA000
-'BLOAD "c:\dos\shl.dis", 0
-'bc = 31
-'cl = 128
-'DO
-'FOR c = 32 TO 64
-'COLOR c
-'LOCATE 10, 16
-'PRINT "Caleb's Paint"
-'NEXT
-'LOOP UNTIL INKEY$ <> ""
-
-
-
-
 CLS
-
-
 
 
 c = 32                   'default color
@@ -87,40 +70,12 @@ PAINT (100, 100), 16, 16
 
 
 DEF SEG = &HA000
-'OPEN "C:\rpg\tile10.dat" FOR INPUT AS #1
-'FOR d = 1 TO 100
-'INPUT #1, C4(d)
-'NEXT
-'d = 0
-'FOR y = 1 TO 10
-'FOR x = 1 TO 10
-'d = d + 1
-'POKE x + y * 320, C4(d)
-'NEXT x
-'NEXT y
-'GET (1, 1)-(10, 10), tile30%
-'CLOSE
-'FOR y = 0 TO 150 STEP 10
-'FOR x = 0 TO 310 STEP 10
-'PUT (x, y), tile30%, PSET
-'NEXT
-'NEXT
-'LINE (0, 160)-(320, 160), 4
-'PAINT (0, 161), 185, 4
-
 
 
 
 
 
 BLOAD file$, 0
-'LINE (120, 110)-(180, 130), 0, B
-'LINE (120, 140)-(180, 160), 0, B
-'LINE (120, 170)-(180, 190), 0, B
-'LINE (107, 117)-(113, 123), 0, BF
-'LINE (107, 147)-(113, 153), 0, BF
-'LINE (107, 177)-(113, 183), 0, BF
-'CLS
 ' actual program loop
 DO
 '------Check mouse and move the cursor as needed
@@ -167,14 +122,10 @@ END IF
   WHILE LEN(INKEY$): WEND
   SELECT CASE k
     CASE &H3B   'F1
-    CASE &H3C   'F2
-    CHAIN "paint.bas"
     CASE &H3D   'F3
     CALL save(bclear%(), cx, cy, bs, f$, file$)
      CASE &H3E   'F4
     CALL load(bclear%(), bs, f$, file$)
-    CASE &H3F   'F5
-   ' CALL hexload(bclear%(), cursor%(), xp2, yp2, x, y, thr)
     hl = 1
     CASE &H40   'F6
     CASE &H52   '0
@@ -302,7 +253,7 @@ LINE (x + 0, y - 5)-(x - 0, y + 5), c - 1
 END IF
 
 LOOP
-STOP
+SYSTEM
 
 
 
@@ -315,61 +266,7 @@ DATA   27,16,16,24,23,22,16
 DATA   16,16,16,16,22,21,20
 DATA   16,16,16,16,16,20,19
 
-'PSET (x, y), 1
-'CIRCLE (x, y), 1, 32
-'CIRCLE (x, y), 2, 55
-'PSET (x + 1, y + 1), 55
-'PSET (x - 1, y - 1), 55
-'PSET (x - 1, y + 1), 55
-'PSET (x + 1, y - 1), 55
-'CIRCLE (x, y), 3, 79
-'PSET (x, y + 2), 55
-'PSET (x, y - 2), 55
-'PSET (x - 1, y + 3), 79
-'PSET (x, y + 3), 79
-'PSET (x + 1, y - 3), 79
-'PSET (x - 1, y - 3), 79
-'PSET (x, y - 3), 79
-'PSET (x + 1, y + 3), 79
 
-SUB hexload (bclear%(), cursor%(), xp2, yp2, x, y, thr)
-CLS
-DEF SEG = &HA000
-OPEN "hg.txt" FOR INPUT AS #1
-INPUT #1, xp2
-INPUT #1, yp2
-
-
-
-FOR y = 5 TO yp2 + 4
-FOR x = 5 TO xp2 + 4
-INPUT #1, c$
-f$ = LEFT$(c$, 1)
-l$ = RIGHT$(c$, 1)
-f$ = LCASE$(f$)
-l$ = LCASE$(l$)
-IF f$ = "f" THEN f$ = "15"
-IF f$ = "e" THEN f$ = "14"
-IF f$ = "d" THEN f$ = "13"
-IF f$ = "c" THEN f$ = "12"
-IF f$ = "b" THEN f$ = "11"
-IF f$ = "a" THEN f$ = "10"
-IF l$ = "f" THEN l$ = "15"
-IF l$ = "e" THEN l$ = "14"
-IF l$ = "d" THEN l$ = "13"
-IF l$ = "c" THEN l$ = "12"
-IF l$ = "b" THEN l$ = "11"
-IF l$ = "a" THEN l$ = "10"
-f = VAL(f$)
-l = VAL(l$)
-f = f * 16
-l = l * 1
-COLR = f + l
-POKE x + y * 320, COLR
-NEXT
-NEXT
-CLOSE
-END SUB
 
 SUB load (bclear%(), bs, f$, file$)
 CLS
