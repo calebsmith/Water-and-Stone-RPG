@@ -62,7 +62,7 @@ In a menu
 Editing Game Assets
 -------------------
 
-There are three utilities for editing game assets, there names followed by uses are listed below
+There are three utilities for editing game assets, there names followed by uses are listed below:
 
     * PAINT - Editing map tiles, characters, items (anything 10 X 10)
     * BACKMAKE - Editing background files
@@ -70,7 +70,7 @@ There are three utilities for editing game assets, there names followed by uses 
 
 These are all run from a DOS prompt by typing their names
 
-Some additional notes about game asset files
+Some additional notes about game asset files"
 
     * All tiles and maps are plain text .DAT files, while the backgrounds are binary .DIS files.
     * The tiles and character files are prefixed by TILE and CHAR
