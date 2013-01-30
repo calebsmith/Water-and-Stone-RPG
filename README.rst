@@ -83,6 +83,7 @@ Controls for these tools are the same:
     * F3 - Save as current filename
     * F4 - Load current filename (or reload)
     * F5 - Change current filename
+    * F6 - Rotate tile (Paint only)
 
 N.B. If F5 is used to change to a filename that doesn't yet exist, loading will crash the editor.
 

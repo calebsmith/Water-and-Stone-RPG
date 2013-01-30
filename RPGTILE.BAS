@@ -789,7 +789,7 @@ CHAIN "main.exe"
 999
 'CLS
 'SCREEN 12
-PRINT "In rpgtile2.exe"
+PRINT "In rpgtile.exe"
 PRINT "ERROR:"
 PRINT ERR
 PRINT "on line:"

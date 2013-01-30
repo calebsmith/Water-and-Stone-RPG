@@ -2148,8 +2148,12 @@ didchange = 0
                 ypl = 8
                 didchange = 1
         END IF
-  
-            
+        IF xpl = 1 AND start$ = "Elftree4" THEN
+            start$ = "Elftree5"
+            xpl = 25
+            ypl = 14
+            didchange = 1
+        END IF            
 END SUB
 
 
