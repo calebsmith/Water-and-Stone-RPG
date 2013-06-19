@@ -5,8 +5,6 @@ A game engine in BASIC resurrected from my childhood.
 
 Play for fun or read the source and cry.
 
-![Game Screenshot](http://raw.github.com/calebsmith/Water-and-Stone-RPG/master/map.gif)
-
 
 Features
 --------
