@@ -6,7 +6,6 @@ A game engine in BASIC resurrected from my childhood.
 Play for fun or read the source and cry.
 
 ![Game Screenshot](http://i.imgur.com/urtXxRj.gif)
-********************************************
 
 Features
 --------
